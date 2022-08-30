@@ -1,14 +1,29 @@
 // Magienne
 // - nom, dureeDeVie,baguetteMagique
 // + rencontrer()
-class Magicien {
+import { Personnage } from "./personnage.js";
+
+export class Magicien extends Personnage {
+  #baguetteMagique;
   constructor(nom, dureeDeVie, baguetteMagique) {
-    this.nom = nom;
-    this.dureeDeVie = dureeDeVie;
-    this.baguetteMagique = baguetteMagique;
+    super(nom, dureeDeVie);
+    this.#baguetteMagique = baguetteMagique;
   }
 
-  rencontrer() {
-    console.log("Je suis un magicien");
+  getBaguetteMagique() {
+    return this.#baguetteMagique;
+  }
+
+  setBaguetteMagique(baguetteMagique) {
+    return this.#baguetteMagique;
   }
 }
+
+const gandalf = new Magicien("Gandalf", 202, "Baguette Gandalf");
+
+console.log(`Nom : ${gandalf.getNom()}
+Durée de vie : ${gandalf.getDureeDeVie()}
+Baguette : ${gandalf.getBaguetteMagique()}
+`);
+
+gandalf.rencontrer();
