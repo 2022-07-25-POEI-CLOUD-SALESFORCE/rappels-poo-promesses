@@ -18,6 +18,10 @@ class Sorcier extends Magicien {
   setBatonMagique(batonMagique) {
     this.#batonMagique = batonMagique;
   }
+
+  rencontrer() {
+    console.log("Je suis un sorcier");
+  }
 }
 
 const saruman = new Sorcier(

@@ -17,6 +17,10 @@ export class Magicien extends Personnage {
   setBaguetteMagique(baguetteMagique) {
     return this.#baguetteMagique;
   }
+
+  rencontrer() {
+    console.log("Je suis un magicien");
+  }
 }
 
 const gandalf = new Magicien("Gandalf", 202, "Baguette Gandalf");
